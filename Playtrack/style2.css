@@ -261,6 +261,17 @@ nav a[aria-current="page"]::after {
   text-align: left;
   text-indent: 0;
   margin-bottom: 10px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.about-nav .card-main p::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FDA481;
+  font-weight: 700;
 }
 
 .card-main p:last-child {
@@ -942,16 +953,16 @@ nav a[aria-current="page"]::after {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 14px;
+  padding-bottom: 22px;
   background: transparent;
   border: none;
   box-shadow: none;
 }
 
 .guide-overview .section-head {
-  margin-top: 6px;
-  margin-bottom: 56px;
+  margin-top: 0;
+  margin-bottom: 42px;
 }
 
 .guide-overview h1 {
@@ -1004,28 +1015,59 @@ nav a[aria-current="page"]::after {
 }
 
 .overview-panels {
-  margin-top: 26px;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.overview-highlights {
+  list-style: none;
+  max-width: 1080px;
+  margin: 14px auto 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.overview-highlights li {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(214, 224, 246, 0.18);
+  background: rgba(18, 24, 42, 0.46);
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+}
+
+.overview-highlights strong {
+  color: var(--accent);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.overview-highlights span {
+  color: #d7deef;
+  font-size: 0.92rem;
 }
 
 .overview-card {
   position: relative;
   border-radius: 14px;
   border: 1px solid rgba(214, 224, 246, 0.16);
-  background: var(--guide-card-bg);
-  padding: 16px 18px 14px;
+  background: linear-gradient(180deg, rgba(20, 28, 49, 0.88), rgba(18, 24, 42, 0.68));
+  padding: 16px 18px 16px;
   box-shadow: 0 10px 24px rgba(8, 12, 26, 0.18);
   transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease;
 }
 
 .overview-card.highlight {
-  border-color: rgba(214, 224, 246, 0.16);
-  box-shadow: 0 10px 24px rgba(8, 12, 26, 0.18);
+  border-color: rgba(255, 195, 168, 0.34);
+  box-shadow: 0 12px 26px rgba(8, 12, 26, 0.2), inset 0 0 0 1px rgba(255, 163, 127, 0.08);
 }
 
 .overview-card:hover {
@@ -1036,15 +1078,25 @@ nav a[aria-current="page"]::after {
 }
 
 .overview-card .mini-icon {
-  width: 54px;
-  height: 54px;
+  width: 44px;
+  height: 44px;
   border-radius: 14px;
   border: 1px solid rgba(255, 195, 168, 0.3);
   background: rgba(71, 84, 122, 0.62);
   display: grid;
   place-items: center;
-  font-size: 1.4rem;
+  color: var(--accent);
   margin-bottom: 10px;
+}
+
+.overview-card .mini-icon svg {
+  width: 22px;
+  height: 22px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .overview-card h3 {
@@ -1277,7 +1329,7 @@ nav a[aria-current="page"]::after {
 }
 
 .flow-arrow {
-  color: #ffc3a8;
+  color: #FDA481;
   font-weight: 700;
 }
 
@@ -1474,6 +1526,10 @@ body.sidebar-open .guide-hamburger {
   }
 
   .overview-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-highlights {
     grid-template-columns: 1fr;
   }
 
