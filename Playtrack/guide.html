@@ -1,36 +1,364 @@
-<!DOCTYPE html>
-<html>
-
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PlayTrack</title>
   <link rel="stylesheet" href="style2.css">
 </head>
-
-<body>
-
+<body class="sidebar-open">
   <nav>
-      <div class="logo">
-        <a href="index.html">
-        <img src="images/LogoLightMode.png" alt="Playtrack Logo" class="logo-light">
-        <img src="images/LogoDarkMode.png" alt="Playtrack Logo" class="logo-dark">
-        </a>
-      </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/LogoLightMode.png" alt="PlayTrack Logo" class="logo-light">
+        <img src="images/LogoDarkMode.png" alt="PlayTrack Logo" class="logo-dark">
+      </a>
+    </div>
 
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="guide.html">System Guide</a></li>
-        <li><a href="developers.html">Developers</a></li>
-      </ul>
-    
-
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="guide.html" aria-current="page">System Guide</a></li>
+      <li><a href="developers.html">Developers</a></li>
+    </ul>
   </nav>
 
+  <button class="guide-hamburger" id="guideHamburger" type="button" aria-label="Toggle system guide menu" aria-controls="guideSidebar" aria-expanded="true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
+  <div class="guide-overlay" id="guideOverlay"></div>
 
+  <main class="guide-page">
+    <aside class="guide-sidebar" id="guideSidebar">
+      <h2>System's Guide</h2>
+      <ul>
+        <li>
+          <a href="#overview" class="active">
+            <span class="side-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3H11v18H4.5A2.5 2.5 0 0 0 2 23z"/><path d="M22 5.5A2.5 2.5 0 0 0 19.5 3H13v18h6.5A2.5 2.5 0 0 1 22 23z"/></svg>
+            </span>
+            <span>Overview</span>
+          </a>
+        </li>
+        <li>
+          <a href="#features">
+            <span class="side-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7z"/><path d="M5 14l.9 2.1L8 17l-2.1.9L5 20l-.9-2.1L2 17l2.1-.9z"/><path d="M19 13l.8 1.8L22 15l-2.2.2L19 17l-.8-1.8L16 15l2.2-.2z"/></svg>
+            </span>
+            <span>Features</span>
+          </a>
+        </li>
+        <li>
+          <a href="#how-to-use">
+            <span class="side-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg>
+            </span>
+            <span>How to Use the System</span>
+          </a>
+        </li>
+        <li>
+          <a href="#visual-guide">
+            <span class="side-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16M3 9h5M3 15h5M16 9h5M16 15h5"/></svg>
+            </span>
+            <span>Visual Guide</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
 
-  
-  </body>
-  </html>
+    <section class="guide-content">
+      <article id="overview" class="guide-section guide-overview panel-overview" data-section="OV">
+        <header class="section-head">
+          <h1>PlayTrack System Guide</h1>
+          <p>Your comprehensive guide to organizing and reflecting on the content you consume.</p>
+        </header>
+        <div class="overview-panels">
+          <article class="overview-card">
+            <h3>What is PlayTrack?</h3>
+            <p>
+              A personal media tracking system designed to help users organize and reflect on the content they consume.
+              Whether it's films, games, or books, PlayTrack allows you to keep everything in one place.
+            </p>
+          </article>
+          <article class="overview-card highlight">
+            <h3>What You'll Learn</h3>
+            <p>
+              This guide will walk you through the system's features and show you how to use them effectively.
+              By the end, you'll know how to log media, track your progress, and better understand your preferences.
+            </p>
+          </article>
+        </div>
+      </article>
+
+      <article id="features" class="guide-section guide-screen panel-features" data-section="01">
+        <div class="section-divider">
+          <span class="divider-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l1.7 4.3L18 9l-4.3 1.7L12 15l-1.7-4.3L6 9l4.3-1.7z"/><path d="M19 13l.8 1.8L22 15l-2.2.2L19 17l-.8-1.8L16 15l2.2-.2z"/></svg>
+          </span>
+        </div>
+        <header class="section-head">
+          <h1>Features</h1>
+          <p>Everything you need to track your media journey.</p>
+        </header>
+        <ul class="feature-list">
+          <li>
+            <span class="mini-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="8" r="4"/></svg>
+            </span>
+            <div>
+              <h3>User Profiles</h3>
+              <p>Create a personal account to keep your media logs private and organized. Each profile stores your entries, reviews, and stats securely.</p>
+            </div>
+          </li>
+          <li>
+            <span class="mini-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </span>
+            <div>
+              <h3>Media Logging</h3>
+              <p>Add entries for movies, series, games, or books. Include details like title, type, genre, personal rating, notes, and even poster images.</p>
+            </div>
+          </li>
+          <li>
+            <span class="mini-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg>
+            </span>
+            <div>
+              <h3>Reviews and Ratings</h3>
+              <p>Quickly rate and write reviews for each media item using structured templates so you can remember your thoughts and experiences.</p>
+            </div>
+          </li>
+          <li>
+            <span class="mini-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h6v18H5a2 2 0 0 0-2 2z"/><path d="M21 5a2 2 0 0 0-2-2h-6v18h6a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <div>
+              <h3>Library Management</h3>
+              <p>Easily view, search, filter, and sort your logged media by title, type, genre, or rating to stay organized and find entries quickly.</p>
+            </div>
+          </li>
+          <li>
+            <span class="mini-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20v-5"/></svg>
+            </span>
+            <div>
+              <h3>Dashboard and Personal Stats</h3>
+              <p>See an overview of your media habits with total items logged, average ratings, top genres, and other personal statistics.</p>
+            </div>
+          </li>
+          <li>
+            <span class="mini-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 19h16"/><path d="M5 15l4-4 3 3 6-7"/></svg>
+            </span>
+            <div>
+              <h3>Visual Summaries</h3>
+              <p>Track your habits visually with simple charts or tables that summarize your media consumption patterns over time.</p>
+            </div>
+          </li>
+        </ul>
+      </article>
+
+      <article id="how-to-use" class="guide-section guide-screen panel-howto" data-section="02">
+        <div class="section-divider">
+          <span class="divider-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M8 5l11 7-11 7z"/></svg>
+          </span>
+        </div>
+        <div class="howto-shell">
+          <header class="section-head">
+            <h1>How to Use PlayTrack</h1>
+            <p>Follow these steps to get the most out of PlayTrack</p>
+          </header>
+          <ol class="guide-steps">
+            <li>
+              <div class="step-head">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/></svg></span>
+                <h3>Create Your User Profile</h3>
+              </div>
+              <p>Sign up or log in to your personal account. Your profile stores all media logs, reviews, and personal stats.</p>
+            </li>
+            <li>
+              <div class="step-head">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h7V4H4z"/><path d="M13 20h7v-7h-7z"/><path d="M13 11h7V4h-7z"/><path d="M4 20h7v-6H4z"/></svg></span>
+                <h3>Check Your Dashboard</h3>
+              </div>
+              <p>The dashboard provides a quick overview of your activity, showing items logged per category and recent activities.</p>
+            </li>
+            <li>
+              <div class="step-head">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+                <h3>Add Media Entries</h3>
+              </div>
+              <p>Click the "Add Media / Plus sign" button in the dashboard, enter details, and upload poster images.</p>
+            </li>
+            <li>
+              <div class="step-head">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg></span>
+                <h3>Write Reviews and Rate Media</h3>
+              </div>
+              <p>Open any media entry from your library, use the structured template, and save your review and rating.</p>
+            </li>
+            <li>
+              <div class="step-head">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h6v18H5a2 2 0 0 0-2 2z"/><path d="M21 5a2 2 0 0 0-2-2h-6v18h6a2 2 0 0 1 2 2z"/></svg></span>
+                <h3>Manage Your Library</h3>
+              </div>
+              <p>Use search, filters, or sorting options to find items by title, type, or genre. Edit entries anytime.</p>
+            </li>
+            <li>
+              <div class="step-head">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20v-5"/></svg></span>
+                <h3>Explore the Summary Page</h3>
+              </div>
+              <p>View top genres, totals per category, top-rated entries, and average ratings in one place.</p>
+            </li>
+            <li>
+              <div class="step-head">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/><path d="M17 4h3M20 1v3"/></svg></span>
+                <h3>Use Your Profile Page</h3>
+              </div>
+              <p>View your watchlist and favorites, and update your username, bio, or profile information.</p>
+            </li>
+            <li>
+              <div class="step-head">
+                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V22a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 0 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H2a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3h.1a1.7 1.7 0 0 0 1-1.6V2a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6h.1a1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.6 1H22a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1z"/></svg></span>
+                <h3>Adjust Settings</h3>
+              </div>
+              <p>Access the Settings page to see your basic information and change your password anytime.</p>
+            </li>
+          </ol>
+        </div>
+      </article>
+
+      <article id="visual-guide" class="guide-section guide-screen panel-visual" data-section="03">
+        <div class="section-divider">
+          <span class="divider-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16M3 9h5M3 15h5M16 9h5M16 15h5"/></svg>
+          </span>
+        </div>
+        <header class="section-head">
+          <h1>Visual Guide</h1>
+          <p>This section shows what PlayTrack looks like in action.</p>
+        </header>
+        <div class="visual-guide-grid">
+          <figure class="visual-guide-item">
+            <img src="images/guide-login.jpg" alt="Login or Create Account screen">
+            <figcaption>
+              <span class="visual-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg></span>
+              <strong>Login / Create Account</strong>
+              <span class="visual-copy">Sign in or create a new profile to access your personal library.</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-guide-item">
+            <img src="images/guide-dashboard.jpg" alt="PlayTrack dashboard screen">
+            <figcaption>
+              <span class="visual-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h7V4H4z"/><path d="M13 20h7v-7h-7z"/><path d="M13 11h7V4h-7z"/><path d="M4 20h7v-6H4z"/></svg></span>
+              <strong>Dashboard</strong>
+              <span class="visual-copy">Quick overview showing the number of items logged per category and your recent activities.</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-guide-item">
+            <img src="images/guide-add-media.jpg" alt="Add Media form screen">
+            <figcaption>
+              <span class="visual-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+              <strong>Add Media Form</strong>
+              <span class="visual-copy">Input new media entries with all relevant details, including poster images.</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-guide-item">
+            <img src="images/guide-library.jpg" alt="Library page screen">
+            <figcaption>
+              <span class="visual-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h6v18H5a2 2 0 0 0-2 2z"/><path d="M21 5a2 2 0 0 0-2-2h-6v18h6a2 2 0 0 1 2 2z"/></svg></span>
+              <strong>Library Page</strong>
+              <span class="visual-copy">View all logged media in one place. Use search, filters, and sorting to quickly find any item.</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-guide-item">
+            <img src="images/guide-entry-detail.jpg" alt="Media Entry Detail page screen">
+            <figcaption>
+              <span class="visual-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg></span>
+              <strong>Media Entry Detail</strong>
+              <span class="visual-copy">Shows the full review and rating for each media item. Edit or update your notes and ratings anytime.</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-guide-item">
+            <img src="images/guide-summary.jpg" alt="Summary page screen">
+            <figcaption>
+              <span class="visual-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20v-5"/></svg></span>
+              <strong>Summary Page</strong>
+              <span class="visual-copy">Detailed stats with top genres, total items per category, top-rated entries, and average ratings using charts or tables.</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-guide-item">
+            <img src="images/guide-profile.jpg" alt="Profile page screen">
+            <figcaption>
+              <span class="visual-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/></svg></span>
+              <strong>Profile Page</strong>
+              <span class="visual-copy">View your watchlist and favorites, and update your username, bio, or personal preferences.</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-guide-item">
+            <img src="images/guide-settings.jpg" alt="Settings page screen">
+            <figcaption>
+              <span class="visual-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V22a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 0 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H2a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3h.1a1.7 1.7 0 0 0 1-1.6V2a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6h.1a1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.6 1H22a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1z"/></svg></span>
+              <strong>Settings Page</strong>
+              <span class="visual-copy">View your basic information and change your password to keep your account secure.</span>
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.documentElement.style.scrollPaddingTop = "0px";
+      const body = document.body;
+      const sidebar = document.getElementById("guideSidebar");
+      const hamburger = document.getElementById("guideHamburger");
+      const overlay = document.getElementById("guideOverlay");
+      const links = sidebar.querySelectorAll("a");
+
+      function openSidebar() {
+        body.classList.add("sidebar-open");
+        hamburger.setAttribute("aria-expanded", "true");
+      }
+
+      function closeSidebar() {
+        body.classList.remove("sidebar-open");
+        hamburger.setAttribute("aria-expanded", "false");
+      }
+
+      hamburger.addEventListener("click", function () {
+        body.classList.contains("sidebar-open") ? closeSidebar() : openSidebar();
+      });
+
+      overlay.addEventListener("click", closeSidebar);
+
+      links.forEach(function (link) {
+        link.addEventListener("click", function () {
+          links.forEach(function (item) {
+            item.classList.remove("active");
+          });
+          link.classList.add("active");
+          closeSidebar();
+        });
+      });
+
+      if (window.location.hash) {
+        const target = sidebar.querySelector('a[href="' + window.location.hash + '"]');
+        if (target) {
+          links.forEach(function (item) {
+            item.classList.remove("active");
+          });
+          target.classList.add("active");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
