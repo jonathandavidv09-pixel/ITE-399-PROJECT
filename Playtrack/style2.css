@@ -41,7 +41,7 @@ body {
   url("images/hero-image2.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-repeat: no-repeat;
   overflow-x: hidden;
   line-height: 1.6;
@@ -263,6 +263,12 @@ nav a[aria-current="page"]::after {
   margin-bottom: 10px;
   position: relative;
   padding-left: 18px;
+}
+
+@media (min-width: 961px) {
+  body {
+    background-attachment: fixed;
+  }
 }
 
 .about-nav .card-main p::before {
@@ -497,6 +503,11 @@ nav a[aria-current="page"]::after {
   .developers-grid {
     grid-template-columns: 1fr;
   }
+
+  .developers-grid > .developer-card:last-child:nth-child(odd) {
+    width: 100%;
+    justify-self: stretch;
+  }
 }
 
 @media (max-width: 560px) {
@@ -514,6 +525,18 @@ nav a[aria-current="page"]::after {
 
   .developer-info h2 {
     font-size: 1.2rem;
+  }
+
+  .portfolio-link {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 720px) {
+  .developer-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 
   .portfolio-link {
@@ -641,7 +664,7 @@ nav a[aria-current="page"]::after {
   color: #FDA481;
   background: rgba(86, 106, 150, 0.48);
   border-color: rgba(255, 195, 168, 0.34);
-  box-shadow: inset 4px 0 0 #ff9f75;
+  box-shadow: inset 4px 0 0 #FDA481;
 }
 
 .side-icon {
@@ -1248,9 +1271,9 @@ nav a[aria-current="page"]::after {
   font-size: 1.35rem;
   font-weight: 700;
   color: #ffe5d9;
-  border: 1px solid rgba(255, 87, 87, 0.45);
-  background: linear-gradient(180deg, rgba(237, 47, 74, 0.95), rgba(181, 21, 47, 0.95));
-  box-shadow: 0 0 24px rgba(237, 47, 74, 0.24);
+  border: 1px solid rgba(180, 24, 45, 0.55);
+  background: linear-gradient(180deg, rgba(180, 24, 45, 0.96), rgba(84, 22, 43, 0.95));
+  box-shadow: 0 0 24px rgba(180, 24, 45, 0.28);
 }
 
 .guide-steps li:hover {
@@ -1549,6 +1572,10 @@ body.sidebar-open .guide-hamburger {
     padding-left: 54px;
   }
 
+  .feature-list li {
+    min-height: auto;
+  }
+
   .feature-list li h3,
   .guide-steps li h3 {
     font-size: 1.5rem;
@@ -1571,6 +1598,7 @@ body.sidebar-open .guide-hamburger {
 
   .visual-guide-item {
     padding: 16px;
+    min-height: auto;
   }
 
   .visual-guide-item figcaption {
@@ -1587,6 +1615,32 @@ body.sidebar-open .guide-hamburger {
 
   .visual-guide-item figcaption strong {
     grid-column: auto;
+  }
+
+  .guide-steps {
+    padding-left: 0;
+  }
+
+  .guide-steps::before {
+    left: 14px;
+    top: 18px;
+    bottom: 18px;
+  }
+
+  .guide-steps li {
+    padding: 16px 14px 14px 54px;
+  }
+
+  .guide-steps li::before {
+    left: 10px;
+    top: 14px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.95rem;
+  }
+
+  .guide-steps li p {
+    margin-left: 0;
   }
 }
 
