@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MY PORTFOLIO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f7f6f2;
+            --lavender: #a696c7;
+            --lavender-dark: #5e5473;
+            --lavender-mist: #efebf7;
+            --line-color: #e2daeb; 
+            --text: #4a454d;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 80px 20px;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .portfolio-card {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 60px;
+            border-radius: 40px;
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.02);
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .profile-img {
+            width: 135px;
+            height: 135px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: white;
+            display: block;
+            margin: 0 auto;
+            border: 4px solid var(--lavender);
+            padding: 4px;
+            box-shadow: 0 0 0 2px white;
+        }
+
+        h1 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 3.2rem;
+            color: var(--lavender-dark);
+            margin: 25px 0 10px 0;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .course-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--lavender);
+            font-weight: 600;
+
+            display: inline-block;
+            border-bottom: 2px solid var(--lavender);
+            padding-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-family: 'Bodoni Moda', serif;
+            font-size: 1.6rem;
+            color: var(--lavender-dark);
+            font-style: italic;
+            margin-bottom: 25px;
+            display: inline-block;
+            border-bottom: 3px solid var(--lavender); 
+            padding-bottom: 4px;
+        }
+
+        .about-text {
+            font-weight: 300;
+            font-size: 1.05rem;
+            color: #666;
+            text-align: justify;
+        }
+
+        .roman-list {
+            list-style-type: upper-roman;
+            padding-left: 20px;
+        }
+
+        .roman-list li {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            border: 1px solid var(--line-color);
+        }
+
+        .schedule-table th {
+            background-color: var(--lavender-mist);
+            color: var(--lavender-dark);
+            padding: 18px;
+            font-family: 'Bodoni Moda', serif;
+            text-align: center;
+            border: 1px solid var(--line-color);
+        }
+
+        .sub-head td {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--lavender);
+            padding: 12px 10px;
+            font-weight: 600;
+            border: 1px solid var(--line-color);
+            background-color: #fafafc;
+        }
+
+        .schedule-table td {
+            padding: 15px 10px;
+            font-size: 0.9rem;
+            border: 1px solid var(--line-color);
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bullet-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .bullet-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: var(--lavender);
+            border-radius: 50%;
+        }
+
+        .footer-action {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .btn-more {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--lavender-dark);
+            color: white;
+            text-decoration: none;
+            padding: 18px 45px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portfolio-card">
+        
+        <header>
+            <img src="../images/portfolios image/Jonathan.png"
+                 alt="Jhonatan profile photo" class="profile-img">
+        <h1 style="font-size: 29px;">VERONA, JHONATAN DAVID M.</h1>
+            <p class="course-tag">BSIT1- 03</p>
+        </header>
+
+        <section>
+            <h2>About Me</h2>
+            <div class="about-text">
+               Hi! I am <b>Jhonatan David M. Verona</b>, a first-year Bachelor of Science in Information Technology student at <b>PHINMA University of Dagupan</b>.
+                I am shy at first, but once I get comfortable, I talk more than expected. I enjoy programming and system development,
+                 and I continue to build my skills while aiming for a strong future in the IT industry.
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Major Subjects S.Y.25-26</h2>
+            <ol class="roman-list">
+                <li><strong>ITE 399</strong> &mdash; Human Computer Interaction 1</li>
+                <li><strong>ITE 186</strong> &mdash; Computer Programming 2</li>
+                <li><strong>ITE 048</strong> &mdash; Discrete Structures</li>
+            </ol>
+        </section>
+
+       <section>
+            <h2>Class Schedule</h2>
+            <div class="table-container">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th colspan="5">S.Y.25-26 2ND SEM SUBJECTS</th>
+                        </tr>
+                        <tr class="sub-head">
+                            <td>CODE</td>
+                            <td>SUBJECT</td>
+                            <td>DAY</td>
+                            <td>TIME</td>
+                            <td>ROOM</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>NST 016</b></td>
+                            <td>National Service Training Program 2 </td>
+                            <td>Mon/Wed</td>
+                            <td>7:00-9:00 AM</td>
+                            <td>BE 203,FLEX Learning</td>
+                        </tr>
+                        <tr>
+                            <td><b>PED 031</b></td>
+                            <td>Physical Activities Toward Health and Fitness (PATHFIT 2)</td>
+                            <td>Mon/Wed</td>
+                            <td>9:00-10:30 AM</td>
+                            <td>GYM,FLEX Learning</td>
+                        </tr>
+                        <tr>
+                            <td><b>GEN 008</b></td>
+                            <td>Living in the IT Era</td>
+                            <td>Mon/Wed</td>
+                            <td>10:30-12:00 PM</td>
+                            <td>CMA-225,FLEX Learning
+                            </td>
+                        </tr>
+                         <tr>
+                            <td><b>ITE 399</b></td>
+                            <td>Human Computer Interaction</td>
+                            <td>Mon/Tue/Wed/Thu</td>
+                            <td>2:00-3:00 PM/1:30-3:00 PM</td>
+                            <td>PTC-403,ITS-200,FLEX Learning</td>
+                        </tr>
+                         <tr>
+                            <td><b>ITE 186</b></td>
+                            <td>Computer Programming 2</td>
+                            <td>Mon/Tue/Wed/Thu</td>
+                            <td>4:30-6:00 PM</td>
+                            <td>ITS-200,PTC-403,FLEX Learning</td>
+                        </tr>
+                         <tr>
+                            <td><b>GEN 005</b></td>
+                            <td>The Contemporary World</td>
+                            <td>Tue/Thu</td>
+                            <td>7:30 AM-9:00 AM</td>
+                            <td>CMA-125,FLEX Learning</td>
+                        </tr>
+                         <tr>
+                            <td><b>ART 002</b></td>
+                            <td>Art Appreciation</td>
+                            <td>Tue/Thu</td>
+                            <td>9:00 AM-10:30 AM</td>
+                            <td>CMA-225,FLEX Learning</td>
+                        </tr>
+                         <tr>
+                            <td><b>ITE 048</b></td>
+                            <td>Human Computer Interaction</td>
+                            <td>Tue/Thu</td>
+                            <td>10:30 AM-12:00 PM</td>
+                            <td>PTC-405,FLEX Learning</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2> MY HOBBIES</h2>
+            <ul class="bullet-list">
+                <li>Playing Online Games</li>
+                <li>Watching Movies</li>
+                <li>Cooking</li>
+            </ul>
+        </section>
+
+        <div class="footer-action">
+            <a style="border-radius: 10px;" href="https://www.facebook.com/Jonathan.verona8" class="btn-more">See More</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

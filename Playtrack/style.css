@@ -99,7 +99,7 @@ nav a[aria-current="page"]::after {
   background: 
     linear-gradient(135deg, rgba(24, 26, 47, 0.6) 0%, rgba(36, 46, 73, 0.7) 42%, rgba(84, 22, 43, 0.82) 100%),
     linear-gradient(rgba(24, 26, 47, 0.3), rgba(24, 26, 47, 0.4)),
-    url("images/hero-image2.jpg");
+    url("images/icons/hero-image2.jpg");
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
