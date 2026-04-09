@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anthony's Portfolio</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f0f0f;
+            color: #f5f5f5;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1300px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #1a1a1a;
+            border-radius: 12px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .header img {
+            width: 140px;
+            margin-bottom: 15px;
+        }
+
+        .header h2 {
+            margin: 10px 0 5px;
+            font-weight: 600;
+        }
+
+        .header h3 {
+            margin: 0;
+            font-weight: 300;
+            color: #aaa;
+        }
+
+        .about h3,
+        .hobbies h3 {
+            border-left: 4px solid #8b0000;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        .about, .subjects, .hobbies {
+            margin-top: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .title-row th {
+            background-color: #8b0000;
+            color: white;
+            font-size: 18px;
+            padding: 12px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #2a2a2a;
+            font-weight: 500;
+        }
+
+        td {
+            background-color: #1f1f1f;
+        }
+
+        tr:hover td {
+            background-color: #2c2c2c;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        button {
+            padding: 12px 28px;
+            background: linear-gradient(45deg, #8b0000, #b30000);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(179, 0, 0, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        hr {
+            margin: 25px 0;
+            border: 0;
+            height: 1px;
+            background: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <img src="../images/porfolio images/Anthony.jpg" alt="My Photo">
+        <h2>DE GUZMAN, ANTHONY V.</h2>
+        <h3>BSIT 1 - 03</h3>
+    </div>
+
+    <div class="about">
+        <h3>ABOUT ME:</h3>
+        <p>
+            I am a dedicated and hardworking student who is always eager to learn new things.
+            I strive to improve my skills and grow both academically and personally.
+            My goal is to become successful in the IT industry.
+        </p>
+    </div>
+
+    <div class="subjects">
+        <table>
+            <tr class="title-row">
+                <th colspan="4">S.Y. 25-26 2ND SEM. SUBJECTS</th>
+            </tr>
+
+            <tr>
+                <th>CODE</th>
+                <th>SUBJECT</th>
+                <th>TIME</th>
+                <th>ROOM</th>
+            </tr>
+
+            <tr>
+                <td>ITE 399</td>
+                <td>Human Computer Interaction</td>
+                <td>2:00 PM - 3:00 PM</td>
+                <td>PTC 403</td>
+            </tr>
+
+            <tr>
+                <td>ITE 186</td>
+                <td>Computer Programming</td>
+                <td>4:30 PM - 6:00 PM</td>
+                <td>ITS 200</td>
+            </tr>
+
+            <tr>
+                <td>ITE 048</td>
+                <td>Discrete Structure</td>
+                <td>10:30 AM - 12:00 PM</td>
+                <td>PTC 405</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="hobbies">
+        <h3>MY HOBBIES:</h3>
+        <ul>
+            <li>Playing Online Games</li>
+            <li>Coding</li>
+            <li>Fixing Motorcycles</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        <a href="https://www.facebook.com/anthony.deguzman.904108" target="_blank">
+            <button>See More</button>
+        </a>
+
+        <hr>
+
+        <p>Anthony V. De Guzman | BSIT 1-03</p>
+    </div>
+
+</div>
+
+</body>
+</html>
