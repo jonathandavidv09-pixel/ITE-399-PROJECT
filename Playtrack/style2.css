@@ -30,6 +30,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 110px;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -127,6 +128,7 @@ nav a {
   color: #d8dceb;
   text-decoration: none;
   font-size: 1rem;
+  line-height: 1.2;
   font-weight: 500;
   padding: 6px 8px;
   border-radius: 8px;
@@ -398,7 +400,7 @@ nav a[aria-current="page"]::after {
 .card-tag {
   display: inline-block;
   margin-bottom: 14px;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent);
@@ -406,14 +408,14 @@ nav a[aria-current="page"]::after {
 
 .card h3 {
   margin-bottom: 14px;
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(1.85rem, 2.7vw, 2.3rem);
   line-height: 1.08;
   color: var(--accent);
 }
 
 .card-main p {
   color: #d7dceb;
-  font-size: 1.02rem;
+  font-size: 1.16rem;
   line-height: 1.85;
   text-align: left;
   text-indent: 0;
@@ -449,7 +451,7 @@ nav a[aria-current="page"]::after {
 
 .card-side p {
   color: #f2ddd5;
-  font-size: 1.02rem;
+  font-size: 1.14rem;
   line-height: 1.75;
 }
 
@@ -830,34 +832,55 @@ nav a[aria-current="page"]::after {
 
 .guide-hamburger {
   position: fixed;
-  top: calc(var(--guide-nav-offset) + 8px);
-  left: 16px;
+  top: calc(var(--guide-nav-offset) + 22px);
+  left: 28px;
   z-index: 15;
-  width: 46px;
-  height: 42px;
-  border: 1px solid var(--panel-border);
+  width: 52px;
+  height: 48px;
+  border: 1px solid rgba(253, 164, 129, 0.58);
   border-radius: 10px;
-  background: rgba(35, 41, 70, 0.98);
+  background: rgba(39, 48, 76, 0.96);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 5px;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  box-shadow: 0 10px 24px rgba(8, 12, 26, 0.26), 0 0 14px rgba(253, 164, 129, 0.22);
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+  animation: hamburgerPulse 2.2s ease-in-out infinite;
 }
 
 .guide-hamburger span {
   display: block;
-  width: 22px;
-  height: 2px;
-  background: #FDA481;
+  width: 24px;
+  height: 2.5px;
+  background: #ffd8c9;
   border-radius: 2px;
 }
 .guide-hamburger:hover{
   color: #FDA481;
-  background: rgba(255, 163, 127, 0.14);
-  border-color: rgba(255, 195, 168, 0.38);
+  background: rgba(68, 50, 58, 0.94);
+  border-color: rgba(255, 195, 168, 0.8);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(8, 12, 26, 0.32), 0 0 18px rgba(253, 164, 129, 0.34);
+}
+
+.guide-hamburger:focus-visible {
+  outline: 2px solid rgba(255, 195, 168, 0.88);
+  outline-offset: 2px;
+}
+
+@keyframes hamburgerPulse {
+  0% {
+    box-shadow: 0 10px 24px rgba(8, 12, 26, 0.26), 0 0 10px rgba(253, 164, 129, 0.18);
+  }
+  50% {
+    box-shadow: 0 12px 26px rgba(8, 12, 26, 0.3), 0 0 16px rgba(253, 164, 129, 0.3);
+  }
+  100% {
+    box-shadow: 0 10px 24px rgba(8, 12, 26, 0.26), 0 0 10px rgba(253, 164, 129, 0.18);
+  }
 }
 
 .guide-overlay {
@@ -1297,6 +1320,28 @@ nav a[aria-current="page"]::after {
   margin-right: auto;
 }
 
+.overview-panels.single {
+  grid-template-columns: 1fr;
+  max-width: 980px;
+  margin-top: 54px;
+}
+
+.learn-card .learn-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.learn-card .mini-icon {
+  margin-bottom: 0;
+  flex: 0 0 auto;
+}
+
+.learn-card h3 {
+  margin-bottom: 0;
+}
+
 .overview-highlights {
   list-style: none;
   max-width: 1080px;
@@ -1499,7 +1544,7 @@ nav a[aria-current="page"]::after {
 
 .guide-steps li {
   margin-bottom: 10px;
-  padding: 18px 18px 16px 80px;
+  padding: 18px 18px 16px clamp(84px, 8.6vw, 100px);
   border: 1px solid rgba(214, 224, 246, 0.18);
   border-radius: 14px;
   background: var(--guide-card-bg);
@@ -1511,14 +1556,14 @@ nav a[aria-current="page"]::after {
   counter-increment: step-counter;
   content: counter(step-counter);
   position: absolute;
-  left: -36px;
-  top: 14px;
-  width: 56px;
-  height: 56px;
+  left: clamp(12px, 1.8vw, 18px);
+  top: clamp(12px, 1.1vw, 14px);
+  width: clamp(44px, 4.6vw, 56px);
+  height: clamp(44px, 4.6vw, 56px);
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 1.55rem;
+  font-size: clamp(1.15rem, 1.55vw, 1.55rem);
   font-weight: 700;
   color: #ffe5d9;
   border: 1px solid rgba(180, 24, 45, 0.55);
@@ -1536,7 +1581,7 @@ nav a[aria-current="page"]::after {
 .guide-steps::before {
   content: "";
   position: absolute;
-  left: -8px;
+  left: clamp(20px, 2.5vw, 28px);
   top: 22px;
   bottom: 22px;
   width: 2px;
@@ -1546,7 +1591,7 @@ nav a[aria-current="page"]::after {
 .guide-steps li h3 {
   color: var(--accent);
   font-size: clamp(1.02rem, 1.45vw, 1.35rem);
-  margin-bottom: 8px;
+  margin-bottom: 0;
 }
 
 .guide-steps li p {
@@ -1559,8 +1604,8 @@ nav a[aria-current="page"]::after {
 .step-head {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
+  gap: 12px;
+  margin-bottom: 4px;
 }
 
 .step-icon {
@@ -1572,7 +1617,7 @@ nav a[aria-current="page"]::after {
   display: grid;
   place-items: center;
   flex: 0 0 62px;
-  margin-left: -16px;
+  margin-left: -26px;
 }
 
 .step-icon svg {
@@ -1648,7 +1693,9 @@ nav a[aria-current="page"]::after {
   object-fit: cover;
   border-radius: 14px;
   background: rgba(69, 83, 121, 0.56);
-  transition: transform 0.35s ease;
+  box-shadow: 0 8px 18px rgba(8, 12, 26, 0.22), 0 0 0 1px rgba(253, 164, 129, 0.16);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: zoom-in;
 }
 
 .visual-guide-item:nth-child(1) img {
@@ -1713,6 +1760,46 @@ nav a[aria-current="page"]::after {
 
 .visual-guide-item:hover img {
   transform: scale(1.02);
+  box-shadow: 0 10px 22px rgba(8, 12, 26, 0.28), 0 0 0 1px rgba(253, 164, 129, 0.24);
+}
+
+.guide-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(4, 8, 18, 0.84);
+}
+
+.guide-lightbox.open {
+  display: flex;
+}
+
+.guide-lightbox img {
+  width: auto;
+  max-width: min(96vw, 1380px);
+  max-height: 88vh;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 195, 168, 0.36);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.guide-lightbox-close {
+  position: fixed;
+  top: 16px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 195, 168, 0.42);
+  background: rgba(18, 24, 42, 0.9);
+  color: #ffd8c9;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 body.sidebar-open .guide-sidebar {
@@ -1733,7 +1820,7 @@ body.sidebar-open .guide-hamburger {
   pointer-events: none;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 900px) {
   :root {
     --guide-nav-offset: 126px;
   }
@@ -1743,9 +1830,11 @@ body.sidebar-open .guide-hamburger {
   }
 
   .guide-hamburger {
-    right: 14px;
+    right: 20px;
     left: auto;
-    top: calc(var(--guide-nav-offset) + 12px);
+    top: calc(var(--guide-nav-offset) + 8px);
+    width: 48px;
+    height: 44px;
   }
 
   .guide-sidebar {
@@ -1788,6 +1877,32 @@ body.sidebar-open .guide-hamburger {
     padding-left: 0;
     padding-right: 0;
     scroll-margin-top: 140px;
+  }
+
+  .guide-steps {
+    padding-left: 0;
+  }
+
+  .guide-steps::before {
+    left: 14px;
+    top: 20px;
+    bottom: 20px;
+  }
+
+  .guide-steps li {
+    padding: 18px 16px 16px clamp(78px, 9.2vw, 90px);
+  }
+
+  .guide-steps li::before {
+    left: clamp(10px, 1.8vw, 14px);
+    top: clamp(16px, 2.2vw, 18px);
+    width: clamp(36px, 5vw, 44px);
+    height: clamp(36px, 5vw, 44px);
+    font-size: clamp(1rem, 2vw, 1.15rem);
+  }
+
+  .guide-steps li p {
+    margin-left: 0;
   }
 
   .visual-guide-item {
@@ -1897,15 +2012,15 @@ body.sidebar-open .guide-hamburger {
   }
 
   .guide-steps li {
-    padding: 18px 14px 16px 84px;
+    padding: 18px 14px 16px clamp(72px, 20vw, 84px);
   }
 
   .guide-steps li::before {
-    left: 18px;
-    top: 18px;
-    width: 36px;
-    height: 36px;
-    font-size: 1.1rem;
+    left: clamp(12px, 4vw, 18px);
+    top: clamp(16px, 3.5vw, 18px);
+    width: clamp(32px, 9vw, 36px);
+    height: clamp(32px, 9vw, 36px);
+    font-size: clamp(0.92rem, 3.2vw, 1.1rem);
   }
 
   .step-head {
@@ -1930,10 +2045,10 @@ body.sidebar-open .guide-hamburger {
   .feature-list li,
   .guide-steps li,
   .visual-guide-item,
-  .visual-guide-item img {
+  .visual-guide-item img,
+  .guide-hamburger {
     transition: none;
     transform: none;
+    animation: none;
   }
 }
-
-
