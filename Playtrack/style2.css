@@ -1596,7 +1596,7 @@ nav a[aria-current="page"]::after {
 
 .guide-steps li p {
   margin: 0;
-  margin-left: 48px;
+  margin-left: 64px;
   max-width: none;
   font-size: clamp(1rem, 1.15vw, 1.14rem);
 }
@@ -1617,7 +1617,7 @@ nav a[aria-current="page"]::after {
   display: grid;
   place-items: center;
   flex: 0 0 62px;
-  margin-left: -26px;
+  margin-left: -10px;
 }
 
 .step-icon svg {
@@ -2031,7 +2031,7 @@ body.sidebar-open .guide-hamburger {
     width: 52px;
     height: 52px;
     flex: 0 0 52px;
-    margin-left: -12px;
+    margin-left: -4px;
     margin-top: 2px;
   }
 
