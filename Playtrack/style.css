@@ -151,7 +151,7 @@ nav a[aria-current="page"]::after {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
-  animation: heroFadeIn 0.9s ease-out both;
+  animation: heroFadeIn 0.65s ease-out both;
 }
 .hero-content {
   display: flex;
@@ -162,7 +162,7 @@ nav a[aria-current="page"]::after {
   gap: 110px;
   z-index: 2;
   margin: 40px auto 0;
-  animation: heroContentRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: heroContentRise 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .hero::before {
   content: "";
@@ -278,7 +278,7 @@ nav a[aria-current="page"]::after {
   max-width: 100%;
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .hero-image img:hover {

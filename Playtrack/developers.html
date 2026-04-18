@@ -133,7 +133,7 @@
 
       cards.forEach(function (card, index) {
         card.classList.add("reveal-on-view");
-        card.style.setProperty("--reveal-delay", ((index % 5) * 0.06).toFixed(3) + "s");
+        card.style.setProperty("--reveal-delay", ((index % 5) * 0.03).toFixed(3) + "s");
       });
 
       if (prefersReducedMotion || !("IntersectionObserver" in window)) {
