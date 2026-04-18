@@ -36,11 +36,10 @@
           <p>PlayTrack is a personal media tracking system that helps you manage your films, games, and books in one place.
              You can easily log your entries, add ratings, write your thoughts, and even attach images.
           </p>
-          <p>It brings your films, games, and books together so your media journey feels easier to track, review, and revisit anytime.</p>
         </div>
         <aside class="card-side">
           <h4>Core idea</h4>
-          <p>Turn everyday media activity into a clean personal archive that is easy to update and revisit.</p>
+          <p>It brings your films, games, and books together into a clean personal archive that is easy to update and revisit.</p>
         </aside>
       </article>
 
@@ -48,9 +47,8 @@
         <div class="card-main">
           <span class="card-tag">Goal</span>
           <h3>Purpose of the System</h3>
-          <p>Its purpose is to help users stay organized with their media activities and to keep track of their personal experiences. 
-            It allows users to document their thoughts, and keep track of what they’ve already explored.</p>
-          <p>Instead of forgetting titles, ratings, or personal thoughts, everything can be kept in one place that feels simple and personal.</p>
+          <p>To help users stay organized with their media activities and to keep track of their personal experiences.
+            It allows users to document their thoughts, and keep track of what they've already explored.</p>
         </div>
         <aside class="card-side">
           <h4>Why it matters</h4>
@@ -63,7 +61,6 @@
           <span class="card-tag">Solution</span>
           <h3>Problem Solved</h3>
           <p>PlayTrack solves the problem of scattered notes and forgotten titles by giving users one reliable place for logging and reviewing media.</p>
-          <p>It reduces duplication, saves time, and makes your full media history much easier to manage and enjoy looking back on.</p>
         </div>
         <aside class="card-side">
           <h4>Main benefit</h4>
@@ -76,11 +73,10 @@
           <span class="card-tag">Audience</span>
           <h3>Target Users</h3>
           <p>It is designed for students and young adults who want a simple and personalized system for managing their favorite media.</p>
-          <p>It fits users who enjoy watching, playing, reading, and keeping track of the titles and experiences that matter to them.</p>
         </div>
         <aside class="card-side">
           <h4>Best fit</h4>
-          <p>Great for users who enjoy media regularly and want a cleaner way to remember what they finished and how they felt about it.</p>
+          <p>Great for users who enjoy watching, playing, reading, and want a cleaner way to keep track of what they finished and how they felt about it.</p>
         </aside>
       </article>
     </div>
@@ -127,5 +123,42 @@
       <p>Created for ITE-399 Project</p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cards = document.querySelectorAll(".about-nav .card");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      cards.forEach(function (card, index) {
+        card.classList.add("reveal-on-view");
+        card.style.setProperty("--reveal-delay", ((index % 4) * 0.06).toFixed(3) + "s");
+      });
+
+      if (prefersReducedMotion || !("IntersectionObserver" in window)) {
+        cards.forEach(function (card) {
+          card.classList.add("is-visible");
+        });
+        return;
+      }
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          } else {
+            entry.target.classList.remove("is-visible");
+          }
+        });
+      }, {
+        threshold: 0.2,
+        rootMargin: "0px 0px -10% 0px"
+      });
+
+      cards.forEach(function (card) {
+        observer.observe(card);
+      });
+    });
+  </script>
 </body>
 </html>
+

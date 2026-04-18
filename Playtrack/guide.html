@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-  <nav>
+  <nav class="guide-nav">
     <div class="logo">
       <a href="index.html">
         <img src="images/LogoLightMode.png" alt="PlayTrack Logo" class="logo-light">
@@ -20,13 +20,13 @@
       <li><a href="guide.html" aria-current="page">System Guide</a></li>
       <li><a href="developers.html">Developers</a></li>
     </ul>
-  </nav>
 
-  <button class="guide-hamburger" id="guideHamburger" type="button" aria-label="Toggle system guide menu" aria-controls="guideSidebar" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+    <button class="guide-hamburger" id="guideHamburger" type="button" aria-label="Toggle system guide menu" aria-controls="guideSidebar" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
 
   <div class="guide-overlay" id="guideOverlay"></div>
 
@@ -179,56 +179,48 @@
           <ol class="guide-steps">
             <li>
               <div class="step-head">
-                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/></svg></span>
                 <h3>Create Your User Profile</h3>
               </div>
               <p>Sign up or log in to your personal account. Your profile stores all media logs, reviews, and personal stats.</p>
             </li>
             <li>
               <div class="step-head">
-                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h7V4H4z"/><path d="M13 20h7v-7h-7z"/><path d="M13 11h7V4h-7z"/><path d="M4 20h7v-6H4z"/></svg></span>
                 <h3>Check Your Dashboard</h3>
               </div>
               <p>The dashboard provides a quick overview of your activity, showing items logged per category and recent activities.</p>
             </li>
             <li>
               <div class="step-head">
-                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
                 <h3>Add Media Entries</h3>
               </div>
               <p>Click the "New / Plus sign" button in the dashboard, enter details, and upload poster images.</p>
             </li>
             <li>
               <div class="step-head">
-                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg></span>
                 <h3>Write Reviews and Rate Media</h3>
               </div>
               <p>Open any media entry from your library, use the structured template, and save your review and rating.</p>
             </li>
             <li>
               <div class="step-head">
-                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h6v18H5a2 2 0 0 0-2 2z"/><path d="M21 5a2 2 0 0 0-2-2h-6v18h6a2 2 0 0 1 2 2z"/></svg></span>
                 <h3>Manage Your Library</h3>
               </div>
               <p>Use search or sorting options to find items by category, title or genre. You can edit entries anytime.</p>
             </li>
             <li>
               <div class="step-head">
-                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-8"/><path d="M22 20v-5"/></svg></span>
                 <h3>Explore the Summary Page</h3>
               </div>
               <p>View top genres, totals per category, top-rated entries, and average ratings in one place.</p>
             </li>
             <li>
               <div class="step-head">
-                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20a8 8 0 0 1 16 0"/><path d="M17 4h3M20 1v3"/></svg></span>
                 <h3>Use Your Profile Page</h3>
               </div>
               <p>View your watchlist and favorites, and update your username, bio, or profile information.</p>
             </li>
             <li>
               <div class="step-head">
-                <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V22a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 0 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H2a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3h.1a1.7 1.7 0 0 0 1-1.6V2a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.6h.1a1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.6 1H22a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1z"/></svg></span>
                 <h3>Adjust Settings</h3>
               </div>
               <p>Access the Settings page to see your basic information and change your password anytime.</p>
@@ -318,8 +310,10 @@
   </main>
 
   <div class="guide-lightbox" id="guideLightbox" aria-hidden="true">
+    <button class="guide-lightbox-nav guide-lightbox-prev" id="guideLightboxPrev" type="button" aria-label="Previous image">&#10094;</button>
     <button class="guide-lightbox-close" id="guideLightboxClose" type="button" aria-label="Close image preview">&times;</button>
     <img id="guideLightboxImage" src="" alt="">
+    <button class="guide-lightbox-nav guide-lightbox-next" id="guideLightboxNext" type="button" aria-label="Next image">&#10095;</button>
   </div>
 
   <footer class="site-footer">
@@ -369,14 +363,19 @@
       document.documentElement.style.scrollPaddingTop = "0px";
       const body = document.body;
       const nav = document.querySelector("nav");
+      const guideSections = document.querySelectorAll(".guide-section");
       const sidebar = document.getElementById("guideSidebar");
       const hamburger = document.getElementById("guideHamburger");
       const overlay = document.getElementById("guideOverlay");
       const links = sidebar.querySelectorAll("a");
+      const howtoSection = document.getElementById("how-to-use");
+      const prefersReducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
       const previewImages = document.querySelectorAll(".visual-guide-item img");
       const lightbox = document.getElementById("guideLightbox");
       const lightboxImage = document.getElementById("guideLightboxImage");
       const lightboxClose = document.getElementById("guideLightboxClose");
+      const lightboxPrev = document.getElementById("guideLightboxPrev");
+      const lightboxNext = document.getElementById("guideLightboxNext");
 
       function syncGuideNavOffset() {
         if (!nav) return;
@@ -396,7 +395,7 @@
 
       function previewSidebarOnLoad() {
         const isDesktop = window.matchMedia("(min-width: 961px)").matches;
-        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const prefersReducedMotion = prefersReducedMotionQuery.matches;
         if (!isDesktop || prefersReducedMotion || window.location.hash) return;
 
         setTimeout(function () {
@@ -437,6 +436,90 @@
       window.addEventListener("resize", syncGuideNavOffset);
       previewSidebarOnLoad();
 
+      const revealTargets = document.querySelectorAll(
+        ".panel-overview .section-head, .overview-highlights li, .overview-card, .panel-features .section-divider, .panel-features .section-head, .feature-list li, .panel-howto .section-divider, .panel-howto .section-head, .guide-steps li, .panel-visual .section-divider, .panel-visual .section-head, .visual-guide-item"
+      );
+
+      revealTargets.forEach(function (element, index) {
+        element.classList.add("reveal-on-view");
+        element.style.setProperty("--reveal-delay", ((index % 6) * 0.045).toFixed(3) + "s");
+      });
+
+      if (prefersReducedMotionQuery.matches || !("IntersectionObserver" in window)) {
+        revealTargets.forEach(function (element) {
+          element.classList.add("is-visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+            } else {
+              entry.target.classList.remove("is-visible");
+            }
+          });
+        }, {
+          threshold: 0.14,
+          rootMargin: "0px 0px -12% 0px"
+        });
+
+        revealTargets.forEach(function (element) {
+          revealObserver.observe(element);
+        });
+      }
+
+      if (prefersReducedMotionQuery.matches || !("IntersectionObserver" in window)) {
+        guideSections.forEach(function (section) {
+          section.classList.add("is-active");
+        });
+      } else {
+        const sectionObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-active");
+            } else {
+              entry.target.classList.remove("is-active");
+            }
+          });
+        }, {
+          threshold: 0.35,
+          rootMargin: "-8% 0px -18% 0px"
+        });
+
+        guideSections.forEach(function (section) {
+          sectionObserver.observe(section);
+        });
+      }
+
+      function replayHowtoLines() {
+        if (!howtoSection) return;
+        if (prefersReducedMotionQuery.matches) return;
+        howtoSection.classList.remove("lines-animate");
+        void howtoSection.offsetWidth;
+        howtoSection.classList.add("lines-animate");
+      }
+
+      if (howtoSection && "IntersectionObserver" in window) {
+        const howtoObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              replayHowtoLines();
+            }
+          });
+        }, {
+          threshold: 0.35
+        });
+
+        howtoObserver.observe(howtoSection);
+      }
+
+      if (window.location.hash === "#how-to-use") {
+        requestAnimationFrame(replayHowtoLines);
+      }
+
+      const previewImageList = Array.from(previewImages);
+      let currentLightboxIndex = 0;
+
       function closeLightbox() {
         lightbox.classList.remove("open");
         lightbox.setAttribute("aria-hidden", "true");
@@ -444,16 +527,33 @@
         lightboxImage.removeAttribute("alt");
       }
 
-      previewImages.forEach(function (image) {
+      function openLightboxAt(index) {
+        if (!previewImageList.length) return;
+        currentLightboxIndex = (index + previewImageList.length) % previewImageList.length;
+        const activeImage = previewImageList[currentLightboxIndex];
+        lightboxImage.src = activeImage.src;
+        lightboxImage.alt = activeImage.alt;
+        lightbox.classList.add("open");
+        lightbox.setAttribute("aria-hidden", "false");
+      }
+
+      function showPrevImage() {
+        openLightboxAt(currentLightboxIndex - 1);
+      }
+
+      function showNextImage() {
+        openLightboxAt(currentLightboxIndex + 1);
+      }
+
+      previewImages.forEach(function (image, index) {
         image.addEventListener("click", function () {
-          lightboxImage.src = image.src;
-          lightboxImage.alt = image.alt;
-          lightbox.classList.add("open");
-          lightbox.setAttribute("aria-hidden", "false");
+          openLightboxAt(index);
         });
       });
 
       lightboxClose.addEventListener("click", closeLightbox);
+      lightboxPrev.addEventListener("click", showPrevImage);
+      lightboxNext.addEventListener("click", showNextImage);
 
       lightbox.addEventListener("click", function (event) {
         if (event.target === lightbox) {
@@ -464,6 +564,12 @@
       document.addEventListener("keydown", function (event) {
         if (event.key === "Escape" && lightbox.classList.contains("open")) {
           closeLightbox();
+        }
+        if (event.key === "ArrowLeft" && lightbox.classList.contains("open")) {
+          showPrevImage();
+        }
+        if (event.key === "ArrowRight" && lightbox.classList.contains("open")) {
+          showNextImage();
         }
       });
     });

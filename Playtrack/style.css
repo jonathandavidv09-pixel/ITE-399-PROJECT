@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --accent: #FDA481;
   --accent-deep: #B4182D;
@@ -19,7 +20,7 @@ body {
   background:
     linear-gradient(135deg, rgba(24, 26, 47, 0.95) 0%, rgba(36, 46, 73, 0.9) 42%, rgba(84, 22, 43, 0.82) 100%),
     linear-gradient(rgba(24, 26, 47, 0.58), rgba(24, 26, 47, 0.72)),
-    url("images/bgimage.png");
+    url("images/hero-image2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: scroll;
@@ -150,6 +151,7 @@ nav a[aria-current="page"]::after {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
+  animation: heroFadeIn 0.9s ease-out both;
 }
 .hero-content {
   display: flex;
@@ -159,8 +161,8 @@ nav a[aria-current="page"]::after {
   width: 100%;
   gap: 110px;
   z-index: 2;
-  margin-left: 70px;
-  margin-top: 40px;
+  margin: 40px auto 0;
+  animation: heroContentRise 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .hero::before {
   content: "";
@@ -187,6 +189,9 @@ nav a[aria-current="page"]::after {
   margin-bottom: 18px;
   color: var(--accent);
   letter-spacing: 1px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroItemReveal 0.65s ease-out 0.15s forwards;
 }
 .hero-text span {
   background: linear-gradient(135deg, var(--accent-deep), var(--accent));
@@ -201,6 +206,9 @@ nav a[aria-current="page"]::after {
   margin-bottom: 28px;
   letter-spacing: 1.2px;
   font-weight: 500;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroItemReveal 0.65s ease-out 0.26s forwards;
 }
 .hero-text p {
   color: var(--text-soft);
@@ -208,6 +216,9 @@ nav a[aria-current="page"]::after {
   line-height: 1.9;
   font-size: 1.12rem;
   max-width: 640px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroItemReveal 0.65s ease-out 0.36s forwards;
 }
 .cta-button {
   background: rgba(253, 164, 129, 0.14);
@@ -228,23 +239,26 @@ nav a[aria-current="page"]::after {
   gap: 14px;
   align-items: center;
   margin-top: 4px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroItemReveal 0.65s ease-out 0.46s forwards;
 }
 
 .cta-secondary {
-  background: rgba(214, 224, 246, 0.08);
-  color: #e7ecfa;
-  border-color: rgba(214, 224, 246, 0.46);
+  background: rgba(46, 204, 113, 0.2);
+  color: #dcffe9;
+  border-color: rgba(46, 204, 113, 0.66);
   padding: 14px 26px;
   font-weight: 550;
   box-shadow: 0 6px 14px rgba(8, 12, 26, 0.14);
 }
 
-.cta-secondary:hover {
+.cta-button.cta-secondary:hover {
   transform: translateY(-1px);
-  background: rgba(253, 164, 129, 0.2);
+  background: rgba(20, 110, 61, 0.78);
   color: #ffffff;
-  border-color: rgba(253, 164, 129, 0.68);
-  box-shadow: 0 10px 22px rgba(8, 12, 26, 0.22), 0 0 12px rgba(253, 164, 129, 0.2);
+  border-color: rgba(46, 204, 113, 0.9);
+  box-shadow: 0 10px 22px rgba(8, 12, 26, 0.24), 0 0 12px rgba(32, 178, 98, 0.3);
 }
 
 .cta-secondary:focus-visible,
@@ -264,13 +278,48 @@ nav a[aria-current="page"]::after {
   max-width: 100%;
   border-radius: 15px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-image img:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 28px 48px rgba(0, 0, 0, 0.42);
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroContentRise {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroItemReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .site-footer {
   position: relative;
   margin-top: 0;
-  padding: 54px 60px 24px;
-  border-top: 1px solid var(--nav-border);
+  padding: 40px 60px 24px;
+  border-top: none;
   background: linear-gradient(180deg, var(--nav-bg) 0%, rgba(18, 24, 42, 0.2) 72%, rgba(18, 24, 42, 0) 100%);
   box-shadow: 0 -10px 24px rgba(8, 12, 26, 0.18);
   backdrop-filter: blur(9px);
@@ -388,6 +437,22 @@ nav a[aria-current="page"]::after {
   color: #b9c2d8;
   font-size: 0.93rem;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .hero-content,
+  .hero-text h1,
+  .tagline,
+  .hero-text p,
+  .cta-actions,
+  .hero-image img {
+    animation: none;
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
 @media (max-width: 1200px) {
   .hero-content {
     gap: 64px;
@@ -562,7 +627,7 @@ nav a[aria-current="page"]::after {
   }
 
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: clamp(3.4rem, 11vw, 4.8rem);
   }
 
   .hero {
